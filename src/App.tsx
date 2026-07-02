@@ -94,8 +94,24 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white text-slate-850 font-sans flex flex-col antialiased selection:bg-orange-100 selection:text-orange-900">
       
+      {/* 顶部温馨提示横条 (Top Access Reminder Announcement Bar) */}
+      <div className="w-full bg-slate-50 border-b border-slate-100 py-2.5 px-4 text-center text-[11px] text-slate-500 select-none z-40">
+        <span className="inline-flex items-center gap-1">
+          💡 提示：因权限配置差异，您可能无法直接打开部分特定页面。如有任何访问疑问或申请权限，请随时
+          <a 
+            href="mailto:ying.han@veeva.com" 
+            className="text-[#ea861a] hover:text-[#d47216] underline underline-offset-2 ml-1 transition-colors font-semibold"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            联系管理员
+          </a>
+          。
+        </span>
+      </div>
+
       {/* Configure Settings Trigger in Absolute Position */}
-      <div className="absolute top-6 right-6 z-40">
+      <div className="absolute top-16 right-6 z-40">
         <button
           id="config-trigger-btn"
           onClick={() => setIsSettingsOpen(true)}
@@ -163,7 +179,6 @@ export default function App() {
               </span>
             )}
           </div>
-
 
         </div>
       </header>
